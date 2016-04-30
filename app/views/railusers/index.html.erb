@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Railusers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @railusers.each do |railuser| %>
+      <tr>
+        <td><%= railuser.name %></td>
+        <td><%= railuser.email %></td>
+        <td><%= link_to 'Show', railuser %></td>
+        <td><%= link_to 'Edit', edit_railuser_path(railuser) %></td>
+        <td><%= link_to 'Destroy', railuser, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Railuser', new_railuser_path %>
