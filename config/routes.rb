@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :railmicroposts
   resources :railusers
   resources :microposts
   resources :users
@@ -6,7 +7,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'users#index'
+  root 'railusers#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
